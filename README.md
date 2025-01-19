@@ -89,4 +89,4 @@ This project showcases an end-to-end Big Data pipeline for IoT applications, emp
 - **Technologies Used**:  
   MQTT, Hadoop, Kafka, Spark, Cassandra, Flask, Scikit-learn, MongoDB Atlas.  
 - **Diagram Reference**:
-![alt text](image.png)
+![alt text](/images/image.png)
