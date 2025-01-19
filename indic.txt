@@ -1,0 +1,6 @@
+hdfs dfs -mkdir /data_lake
+hdfs dfs -mkdir /data_lake/parkinson_data
+
+
+hdfs dfs -chmod 777 /data_lake/parkinson_data
+

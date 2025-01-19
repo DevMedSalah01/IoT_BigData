@@ -1,0 +1,57 @@
+(base) osboxes@osboxes:~$ sudo systemctl start mongod
+[sudo] password for osboxes: 
+(base) osboxes@osboxes:~$ systemctl status mongod
+
+base) osboxes@osboxes:~$ cd hadoop
+(base) osboxes@osboxes:~/hadoop$  start-all.sh
+WARNING: Attempting to start all Apache Hadoop 
+
+stop-dfs.sh
+hdfs namenode -format
+start-dfs.sh
+
+
+
+start-yarn.sh
+
+stop-yarn.sh
+
+hdfs dfsadmin -report
+
+
+
+(base) osboxes@osboxes:~/hadoop$  hdfs dfs -ls /
+Found 1 items
+drwxr-xr-x   - osboxes supergroup          0 2024-12-22 00:27 /data_lake
+
+hdfs dfs -mkdir /data_lake/parkinson_data/
+
+
+(base) osboxes@osboxes:~/hadoop$ hdfs dfs -ls /data_lake/
+Found 1 items
+drwxrwxrwx   - osboxes supergroup          0 2025-01-08 10:47 /data_lake/parkinson_data
+
+
+
+(base) osboxes@osboxes:~$ sudo service mosquitto status
+[sudo] password for osboxes: 
+● mosquitto.service - Mosquitto MQTT Broker
+     Loaded: loaded (/usr/lib/systemd/system/mosquitto.service; enabled; preset>
+     Active: active (running) 
+
+
+cd ~/apache-cassandra-4.1.7 && bin/cassandra
+cd ~/apache-cassandra-4.1.7 && bin/nodetool status
+
+spark-shell
+
+pip install pyspark
+pip install Flask scikit-learn
+
+hdfs dfs -chmod 777 /data_lake/parkinson_data
+hdfs dfs -ls /data_lake
+
+
+./bin/kafka-server-start.sh config/server.properties
+
+
